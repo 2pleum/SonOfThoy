@@ -7,7 +7,7 @@ public class ourButton implements ActionListener {
     private Button a = new Button();
     private String img, name;
     private float size;
-    public ourButton(String img,String name,String color,float size) {
+    public ourButton(String img,String name,float size) {
         this.img = img;
         this.name = name;
         this.size = size;
