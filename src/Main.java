@@ -13,6 +13,5 @@ public class Main {
     }
     public static void main(String[] args) {
         setFrame();
-        ourButton b = new ourButton("1.png","start",20);
     }
 }
