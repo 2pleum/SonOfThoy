@@ -1,12 +1,10 @@
-package SunOfThoy;
-
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Main {
-    public static AllFood[] setAllFood() {
+    public static AllFood[] getAllFood() {
         AllFood [] a = new AllFood[191];
         a[0] = new ThaiFood("ราดหน้า");
         a[1] = new ThaiFood("ผัดหอยลาย");
@@ -201,7 +199,7 @@ public class Main {
         a[190] = new ThaiFood("หมี่ผัดกระเฉด");
         return a;
     }
-    public static ThaiFood [] setThaiFood() {
+    public static ThaiFood [] getThaiFood() {
         ThaiFood [] t = new ThaiFood[60];
         t[0] = new ThaiFood("ต้มยำกุ้ง");
         t[1] = new ThaiFood("ผัดกะเพรา");
@@ -265,7 +263,7 @@ public class Main {
         t[59] = new ThaiFood("หมี่ผัดกระเฉด");
         return t;
     }
-    public static AsianFood [] setAsianFood() {
+    public static AsianFood [] getAsianFood() {
         AsianFood [] as = new AsianFood[50];
         as[0] = new AsianFood("ต๊อกโบกี");
         as[1] = new AsianFood("คิมบับ");
@@ -319,7 +317,7 @@ public class Main {
         as[49] = new AsianFood("พะโล้");
         return as;
     }
-    public static HealthyFood [] setHealthyFood() {
+    public static HealthyFood [] getHealthyFood() {
         HealthyFood [] h = new HealthyFood[40];
         h[0] = new HealthyFood("สลัดอกไก่");
         h[1] = new HealthyFood("ข้าวยำสเต๊กไก่แซ่บสูตรคลีน");
@@ -363,7 +361,7 @@ public class Main {
         h[39] = new HealthyFood("ลาบอกไก่");
         return h;
     }
-    public static WesternFood [] setWesternFood() {
+    public static WesternFood [] getWesternFood() {
         WesternFood [] w = new WesternFood[40];
         w[0] = new WesternFood("เบอร์เกอร์");
         w[1] = new WesternFood("สปาร์เก็ตตี้คาร์โบนาร่า");
@@ -407,7 +405,7 @@ public class Main {
         w[39] = new WesternFood("แฮชบราวน์");
         return w;
     }
-    public static SnackAndSweet[] setSnackAndSweet() {
+    public static SnackAndSweet[] getSnackAndSweet() {
         SnackAndSweet [] s = new SnackAndSweet[40];
         s[0] = new SnackAndSweet("ขนมเบื้อง");
         s[1] = new SnackAndSweet("เฟรนช์ฟราย");
