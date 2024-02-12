@@ -13,9 +13,9 @@ public class Main {
         frame.setSize(screenSize.getSize());
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLocationRelativeTo(null);
-        JLabel text = new JLabel("Hello world",JLabel.LEFT);
-        text.setSize(100,100);
-        frame.add(text);
+//        JLabel text = new JLabel("Hello world",JLabel.LEFT);
+//        text.setSize(100,100);
+//        frame.add(text);
     }
 
 }
