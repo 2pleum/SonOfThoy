@@ -458,7 +458,6 @@ public class Main {
         frame.setSize(screenSize.getSize());
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLocationRelativeTo(null);
-
     }
 
 }
