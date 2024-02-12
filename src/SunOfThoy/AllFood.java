@@ -1,4 +1,4 @@
-package Food;
+package SunOfThoy;
 
 public class AllFood {
     protected String name;
