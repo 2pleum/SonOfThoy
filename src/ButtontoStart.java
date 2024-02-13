@@ -11,10 +11,18 @@ public class ButtontoStart extends JButton implements ActionListener {
 
     ButtontoStart(MainFrame mainFrame) {
         this.mainFrame = mainFrame;
-        ImageIcon image = new ImageIcon("6422199.png");
-        this.setIcon(image);
+//        ImageIcon image = new ImageIcon("6422199.png");
+//        this.setIcon(image);
+//        ImageIcon xxx = new ImageIcon("startB.gif");
+
+//        ImageIcon xxx = new ImageIcon("path/to/startB.gif");
+//        this.setIcon(xxx);
+//        this.setRolloverIcon(xxx);
+
+//        this.setPressedIcon(xxx);
         this.setPreferredSize(new Dimension(250,250)); // ปรับขนาดเป็น 150x30
         this.addActionListener(this);
+
     }
 
 

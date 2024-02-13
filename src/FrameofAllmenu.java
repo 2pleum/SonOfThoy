@@ -10,5 +10,6 @@ public  class FrameofAllmenu extends JFrame {
         this.setSize(screenSize.getSize());
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
+
     }
 }

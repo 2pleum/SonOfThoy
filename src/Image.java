@@ -3,7 +3,10 @@ import javax.swing.ImageIcon;
 public class Image {
     //first page
     // ImageIcon
-    ImageIcon startBPic = new ImageIcon("1.png"); 
+    ImageIcon startBPic = new ImageIcon("startB.gif"); 
+    // public  getStartB(){
+        // return/ startBPic;
+    // }
     ImageIcon background1 = new ImageIcon("1.png");
     //menu button page
     ImageIcon allFood = new ImageIcon("1.png"); //รูปถูกละ
@@ -19,4 +22,5 @@ public class Image {
     ImageIcon background3 = new ImageIcon("1.png"); //หม้อฝาชีเปิด
     ImageIcon yesBPic = new ImageIcon("1.png");
     ImageIcon noBPic = new ImageIcon("1.png");
+
 }
