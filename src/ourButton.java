@@ -1,29 +1,27 @@
-<<<<<<< Updated upstream:src/ourButton.java
+//<<<<<<< Updated upstream:src/ourButton.java
+//import java.awt.*;
+//import javax.swing.*;
+//import java.awt.event.ActionEvent;
+//import java.awt.event.ActionListener;
+//
+//public class ourButton {
+//    private String img;
+//    private int w, h;
+//    public ourButton(String img,int w,int h) {
+//        this.img = img;
+//        this.w = w;
+//        this.h = h;
+//    }
+//
+//
+//}
+
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
-public class ourButton {
-    private String img;
-    private int w, h;
-    public ourButton(String img,int w,int h) {
-        this.img = img;
-        this.w = w;
-        this.h = h;
-    }
-
-
-}
-=======
-package SunOfThoy;
-
-// import java.awt.*;
-// import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import javax.swing.JButton;
-    public class ourButton extends Image implements ActionListener{
+public class ourButton extends Image implements ActionListener {
         //start b
         
         JButton startB = new JButton();
@@ -69,7 +67,6 @@ import javax.swing.JButton;
         }
     
         // You can add more methods or code here as needed
-    }
         // public void actionPerformed(ActionEvent e){
     
         // }
@@ -77,4 +74,3 @@ import javax.swing.JButton;
 
 
 }
->>>>>>> Stashed changes:src/SunOfThoy/ourButton.java

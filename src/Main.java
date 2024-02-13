@@ -4,7 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Main {
-    public static AllFood[] getAllFood() {
+    public static AllFood [] getAllFood() {
         AllFood [] a = new AllFood[191];
         a[0] = new ThaiFood("ราดหน้า");
         a[1] = new ThaiFood("ผัดหอยลาย");

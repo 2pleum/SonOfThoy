@@ -1,5 +1,3 @@
-package SunOfThoy;
-
 import javax.swing.ImageIcon;
 
 public class Image {
