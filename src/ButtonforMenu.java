@@ -46,11 +46,11 @@ public class ButtonforMenu implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == allmenuButton){
             menuframe.setVisible(false);
-            FrameofAllmenu frameofAllmenu = new FrameofAllmenu();
+            randomFrame ranf = new randomFrame();
         }
         else if (e.getSource() == thaiFoodButton) {
             menuframe.setVisible(false);
-            FrameofThaifood frameofThaifood = new FrameofThaifood();
+            randomFrame ranf = new randomFrame();
         }
         else if (e.getSource() == asianFoodButton) {
             menuframe.setVisible(true);

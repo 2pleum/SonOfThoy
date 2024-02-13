@@ -14,10 +14,17 @@ public class randomB implements ActionListener {
 
     public randomB(randomFrame ranF) {
         this.ranF = ranF;
-        // สร้าง JButton สำหรับเมนูทั้งหมด
+        // สร้าง JButton AllF
         randomButton1 = new JButton("Random");
         randomButton1.setPreferredSize(new Dimension(200, 100));
+//        ImageIcon xxx = new ImageIcon("startB.gif");
+//        randomButton1.setIcon(xxx); งงใส่รูปไม่ได้
         randomButton1.addActionListener(this);
+        //ThaiF
+        randomButton2 = new JButton("Random");
+        randomButton2.setPreferredSize(new Dimension(200, 100));
+        randomButton2.addActionListener(this);
+
     }
 
     public void actionPerformed(ActionEvent e) {
@@ -25,8 +32,15 @@ public class randomB implements ActionListener {
             ranF.setVisible(false);
 
         }
+        if (e.getSource() == randomButton2) {
+            ranF.setVisible(false);
+
+        }
     }
     public JButton getRandomButton1() {
+        return randomButton1;
+    }
+    public JButton getRandomButton2() {
         return randomButton1;
     }
 }
