@@ -12,6 +12,7 @@ public class ButtonforMenu implements ActionListener {
     private JButton westernFoodButton;
     private JButton snackButton;
     private  Menuframe menuframe;
+    private char type;
 
     public ButtonforMenu(Menuframe menuframe) {
         this.menuframe = menuframe;
@@ -45,28 +46,40 @@ public class ButtonforMenu implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == allmenuButton){
+            type = 'A';
             menuframe.setVisible(false);
             randomFrame ranf = new randomFrame();
+            ranf.setType(type);
         }
         else if (e.getSource() == thaiFoodButton) {
+            type = 'T';
             menuframe.setVisible(false);
             randomFrame ranf = new randomFrame();
+            ranf.setType(type);
         }
         else if (e.getSource() == asianFoodButton) {
-            menuframe.setVisible(true);
-            FrameofAsainfood frameofAsainfood = new FrameofAsainfood();
+            type = 'I';
+            menuframe.setVisible(false);
+            randomFrame ranf = new randomFrame();
+            ranf.setType(type);
         }
         else if (e.getSource() == healthyFoodButton) {
+            type = 'H';
             menuframe.setVisible(false);
-            FrameofHealtyfood frameofHealtyfood = new FrameofHealtyfood();
+            randomFrame ranf = new randomFrame();
+            ranf.setType(type);
         }
         else if (e.getSource() == westernFoodButton) {
+            type = 'W';
             menuframe.setVisible(false);
-            FrameofWesternfood frameofWesternfood = new FrameofWesternfood();
+            randomFrame ranf = new randomFrame();
+            ranf.setType(type);
         }
         else if (e.getSource() == snackButton) {
+            type = 'S';
             menuframe.setVisible(false);
-            FrameofSnackandsweet frameofSnackandsweet = new FrameofSnackandsweet();
+            randomFrame ranf = new randomFrame();
+            ranf.setType(type);
         }
 
     }
