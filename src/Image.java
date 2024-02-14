@@ -1,5 +1,7 @@
 import javax.swing.ImageIcon;
-
+import javax.swing.*;
+import java.awt.*;
+import java.io.File;
 public class Image {
     //first page
     // ImageIcon
@@ -22,5 +24,8 @@ public class Image {
     ImageIcon background3 = new ImageIcon("1.png"); //หม้อฝาชีเปิด
     ImageIcon yesBPic = new ImageIcon("1.png");
     ImageIcon noBPic = new ImageIcon("1.png");
-
+    ImageIcon thoyPic = new ImageIcon("lastFPic.jpg");
+    public ImageIcon getThoyPic(){
+        return  thoyPic;
+    }
 }

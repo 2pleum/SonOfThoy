@@ -7,20 +7,22 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 public class LastLabel {
-    private JLabel thoy;
+    private JLabel thoyL;
     private LastFrame lastF;
     private ImageIcon thoyPic;
     public LastLabel(LastFrame lastF) {
         this.lastF = lastF;
-        thoy = new JLabel();
-        thoyPic = new ImageIcon("lastFPic.jpg");
-        thoy.setText("Kuy");
+        thoyL = new JLabel();
+        Image img = new Image();git
+//        thoy.setText("Kuy");
 
-        thoy.setPreferredSize(new Dimension(200, 100));
-        thoy.setIcon(thoyPic);
+//        thoyL.setPreferredSize(new Dimension(200, 100));
+        thoyL.setIcon(img.getThoyPic());
+        thoyL.setBounds(0,0,1000,1000);
+
     }
-    public JLabel getThoy(){
-        return thoy;
+    public JLabel getThoyL(){
+        return thoyL;
     }
 
 }

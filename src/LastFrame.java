@@ -13,7 +13,7 @@ public class LastFrame extends  JFrame {
         this.setLocationRelativeTo(null);
         this.setLayout(new FlowLayout(FlowLayout.CENTER)); // กำหนด Layout เป็น null เพื่อให้สามารถกำหนดตำแหน่งของปุ่มเองได้
 
-        this.add(lastL.getThoy()); //ข้อความไม่ออกกรี๊ด
+        this.add(lastL.getThoyL()); //ข้อความไม่ออกกรี๊ด
         this.setVisible(true);
     }
 }
