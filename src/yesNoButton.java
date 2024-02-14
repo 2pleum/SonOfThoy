@@ -31,6 +31,7 @@ public class yesNoButton implements ActionListener {
         }
         else if(e.getSource() == NoB) {
             yesNoF.setVisible(true);
+            randomFrame ranF = new randomFrame();
         }
     }
     public JButton getYesB() {

@@ -1,13 +1,23 @@
-import javax.swing.*;
 
+import javax.swing.*;
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
 public class LastLabel {
     private JLabel thoy;
     private LastFrame lastF;
+    private ImageIcon thoyPic;
     public LastLabel(LastFrame lastF) {
         this.lastF = lastF;
-        JLabel thoy= new JLabel();
+        thoy = new JLabel();
+        thoyPic = new ImageIcon("lastFPic.jpg");
         thoy.setText("Kuy");
-        thoy.setBounds(100,500,200,400);
+
+        thoy.setPreferredSize(new Dimension(200, 100));
+        thoy.setIcon(thoyPic);
     }
     public JLabel getThoy(){
         return thoy;

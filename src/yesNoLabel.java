@@ -5,7 +5,7 @@ public class yesNoLabel {
     private yesOrNoFrame yesNoF;
     public yesNoLabel(yesOrNoFrame yesNoF) {
         this.yesNoF = yesNoF;
-        JLabel nameFood = new JLabel();
+        nameFood = new JLabel();
         nameFood.setText("Kuy");
         nameFood.setBounds(100,500,200,400);
     }
