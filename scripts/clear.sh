@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-rm -rf out/
+rm -rf ../out/
