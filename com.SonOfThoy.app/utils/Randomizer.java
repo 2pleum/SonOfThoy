@@ -1,16 +1,17 @@
-package SunOfThoy;
-import java.lang.Math;
+package utils;
+
 import java.util.Arrays;
+
 public class Randomizer {
-    private int [] nlist;
-    private int amount;
     protected int num;
+    private final int[] nlist;
+    private final int amount;
     private int count = 0;
-    private boolean check,checkOk;
+    private boolean check, checkOk;
 
     public Randomizer(int amount) {
         this.amount = amount;
-        nlist = new int[amount+1];
+        nlist = new int[amount + 1];
 //        randomNumber();
     }
 
@@ -18,26 +19,28 @@ public class Randomizer {
         checkOk = false;
         do {
             check = false;
-            num = 1+(int)(Math.random()*(amount));
-            for (int i=0;i<nlist.length;i++) {
-                if (nlist[i]==num) {
+            num = 1 + (int) (Math.random() * (amount));
+            for (int i = 0; i < nlist.length; i++) {
+                if (nlist[i] == num) {
                     check = true;
                     break;
                 }
             }
-            if (count==amount) {
+            if (count == amount) {
                 Arrays.fill(nlist, 0);
                 count = 0;
                 nlist[count] = num;
                 count++;
                 checkOk = true;
-            }
-            else if (!check){
+            } else if (!check) {
                 nlist[count] = num;
                 count++;
                 checkOk = true;
             }
-        } while(!checkOk);
+        } while (!checkOk);
     }
-    public int getIndex() {return num;}
+
+    public int getIndex() {
+        return num;
+    }
 }

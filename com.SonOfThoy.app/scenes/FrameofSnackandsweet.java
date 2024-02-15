@@ -1,9 +1,11 @@
+package scenes;
+
 import javax.swing.*;
 import java.awt.*;
 
-public class FrameofThaifood extends JFrame {
+public class FrameofSnackandsweet extends JFrame {
 
-    FrameofThaifood(){
+    FrameofSnackandsweet() {
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         this.getContentPane().setLayout(null);
         this.setVisible(true);

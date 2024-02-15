@@ -1,20 +1,26 @@
-import javax.swing.JButton;
+package ui;
+
+import scenes.MenuFrame;
+import utils.RandomFrame;
+
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class ButtonforMenu implements ActionListener {
 
-    private JButton allmenuButton;
-    private JButton thaiFoodButton;
-    private JButton asianFoodButton; // เปลี่ยนชื่อตัวแปรจาก AsainFood เป็น AsianFood
-    private JButton healthyFoodButton; // เปลี่ยนชื่อตัวแปรเป็น healthyFoodButton
-    private JButton westernFoodButton;
-    private JButton snackButton;
-    private  Menuframe menuframe;
+public class ButtonForMenu implements ActionListener {
+
+    private final JButton allmenuButton;
+    private final JButton thaiFoodButton;
+    private final JButton asianFoodButton; // เปลี่ยนชื่อตัวแปรจาก AsainFood เป็น foods.AsianFood
+    private final JButton healthyFoodButton; // เปลี่ยนชื่อตัวแปรเป็น healthyFoodButton
+    private final JButton westernFoodButton;
+    private final JButton snackButton;
+    private final MenuFrame menuframe;
     private char type;
 
-    public ButtonforMenu(Menuframe menuframe) {
+    public ButtonForMenu(MenuFrame menuframe) {
         this.menuframe = menuframe;
         // สร้าง JButton สำหรับเมนูทั้งหมด
         allmenuButton = new JButton("All Menu");
@@ -45,40 +51,35 @@ public class ButtonforMenu implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(e.getSource() == allmenuButton){
+        if (e.getSource() == allmenuButton) {
             type = 'A';
             menuframe.setVisible(false);
-            randomFrame ranf = new randomFrame();
+            RandomFrame ranf = new RandomFrame();
             ranf.setType(type);
-        }
-        else if (e.getSource() == thaiFoodButton) {
+        } else if (e.getSource() == thaiFoodButton) {
             type = 'T';
             menuframe.setVisible(false);
-            randomFrame ranf = new randomFrame();
+            RandomFrame ranf = new RandomFrame();
             ranf.setType(type);
-        }
-        else if (e.getSource() == asianFoodButton) {
+        } else if (e.getSource() == asianFoodButton) {
             type = 'I';
             menuframe.setVisible(false);
-            randomFrame ranf = new randomFrame();
+            RandomFrame ranf = new RandomFrame();
             ranf.setType(type);
-        }
-        else if (e.getSource() == healthyFoodButton) {
+        } else if (e.getSource() == healthyFoodButton) {
             type = 'H';
             menuframe.setVisible(false);
-            randomFrame ranf = new randomFrame();
+            RandomFrame ranf = new RandomFrame();
             ranf.setType(type);
-        }
-        else if (e.getSource() == westernFoodButton) {
+        } else if (e.getSource() == westernFoodButton) {
             type = 'W';
             menuframe.setVisible(false);
-            randomFrame ranf = new randomFrame();
+            RandomFrame ranf = new RandomFrame();
             ranf.setType(type);
-        }
-        else if (e.getSource() == snackButton) {
+        } else if (e.getSource() == snackButton) {
             type = 'S';
             menuframe.setVisible(false);
-            randomFrame ranf = new randomFrame();
+            RandomFrame ranf = new RandomFrame();
             ranf.setType(type);
         }
 

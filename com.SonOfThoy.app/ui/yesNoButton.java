@@ -1,13 +1,19 @@
+package ui;
+
+import scenes.LastFrame;
+import scenes.yesOrNoFrame;
+import utils.RandomFrame;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class yesNoButton implements ActionListener {
-    private JButton yesB;
-    private JButton NoB;
+    private final JButton yesB;
+    private final JButton NoB;
+    private final yesOrNoFrame yesNoF;
     private char type;
-    private yesOrNoFrame yesNoF;
 
     public yesNoButton(yesOrNoFrame yesNoF) {
         this.yesNoF = yesNoF;
@@ -28,15 +34,16 @@ public class yesNoButton implements ActionListener {
         if (e.getSource() == yesB) {
             yesNoF.setVisible(false);
             LastFrame lastF = new LastFrame();
-        }
-        else if(e.getSource() == NoB) {
+        } else if (e.getSource() == NoB) {
             yesNoF.setVisible(true);
-            randomFrame ranF = new randomFrame();
+            RandomFrame ranF = new RandomFrame();
         }
     }
+
     public JButton getYesB() {
         return yesB;
     }
+
     public JButton getNoB() {
         return NoB;
     }

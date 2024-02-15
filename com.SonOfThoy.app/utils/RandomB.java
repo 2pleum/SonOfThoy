@@ -1,14 +1,18 @@
+package utils;
+
+import scenes.yesOrNoFrame;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class randomB implements ActionListener {
-    private JButton randomButton;
+public class RandomB implements ActionListener {
+    private final JButton randomButton;
+    private final RandomFrame ranF;
     private char type;
-    private randomFrame ranF;
 
-    public randomB(randomFrame ranF) {
+    public RandomB(RandomFrame ranF) {
         this.ranF = ranF;
         // สร้าง JButton AllF
         randomButton = new JButton("Random");
@@ -24,9 +28,9 @@ public class randomB implements ActionListener {
         if (e.getSource() == randomButton) {
             ranF.setVisible(false);
             yesOrNoFrame yesNoF = new yesOrNoFrame();
-
         }
     }
+
     public JButton getRandomButton1() {
         return randomButton;
     }

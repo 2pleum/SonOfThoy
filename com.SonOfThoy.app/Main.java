@@ -1,11 +1,15 @@
-import java.awt.*;
-import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import foods.*;
+import scenes.MainFrame;
 
 public class Main {
-    public static AllFood [] getAllFood() {
-        AllFood [] a = new AllFood[191];
+    public static AllFood[] getAllFood() {
+        AllFood[] a = new AllFood[191];
+
+//        foods.AllFood[] s = new foods.AllFood[]{
+//            new foods.ThaiFood("s"),
+//            new foods.AsianFood("k"),
+//        };
+
         a[0] = new ThaiFood("ราดหน้า");
         a[1] = new ThaiFood("ผัดหอยลาย");
         a[2] = new HealthyFood("สลัดอกไก่");
@@ -199,8 +203,9 @@ public class Main {
         a[190] = new ThaiFood("หมี่ผัดกระเฉด");
         return a;
     }
-    public static ThaiFood [] getThaiFood() {
-        ThaiFood [] t = new ThaiFood[60];
+
+    public static ThaiFood[] getThaiFood() {
+        ThaiFood[] t = new ThaiFood[60];
         t[0] = new ThaiFood("ต้มยำกุ้ง");
         t[1] = new ThaiFood("ผัดกะเพรา");
         t[2] = new ThaiFood("ขนมจีนน้ำเงี้ยว");
@@ -263,8 +268,9 @@ public class Main {
         t[59] = new ThaiFood("หมี่ผัดกระเฉด");
         return t;
     }
-    public static AsianFood [] getAsianFood() {
-        AsianFood [] as = new AsianFood[50];
+
+    public static AsianFood[] getAsianFood() {
+        AsianFood[] as = new AsianFood[50];
         as[0] = new AsianFood("ต๊อกโบกี");
         as[1] = new AsianFood("คิมบับ");
         as[2] = new AsianFood("ซูชิ");
@@ -317,8 +323,9 @@ public class Main {
         as[49] = new AsianFood("พะโล้");
         return as;
     }
-    public static HealthyFood [] getHealthyFood() {
-        HealthyFood [] h = new HealthyFood[40];
+
+    public static HealthyFood[] getHealthyFood() {
+        HealthyFood[] h = new HealthyFood[40];
         h[0] = new HealthyFood("สลัดอกไก่");
         h[1] = new HealthyFood("ข้าวยำสเต๊กไก่แซ่บสูตรคลีน");
         h[2] = new HealthyFood("ข้าวฟักทองผัดไข่");
@@ -361,8 +368,9 @@ public class Main {
         h[39] = new HealthyFood("ลาบอกไก่");
         return h;
     }
-    public static WesternFood [] getWesternFood() {
-        WesternFood [] w = new WesternFood[40];
+
+    public static WesternFood[] getWesternFood() {
+        WesternFood[] w = new WesternFood[40];
         w[0] = new WesternFood("เบอร์เกอร์");
         w[1] = new WesternFood("สปาร์เก็ตตี้คาร์โบนาร่า");
         w[2] = new WesternFood("สปาร์เก็ตตี้ผัดซอส");
@@ -405,8 +413,9 @@ public class Main {
         w[39] = new WesternFood("แฮชบราวน์");
         return w;
     }
+
     public static SnackAndSweet[] getSnackAndSweet() {
-        SnackAndSweet [] s = new SnackAndSweet[40];
+        SnackAndSweet[] s = new SnackAndSweet[40];
         s[0] = new SnackAndSweet("ขนมเบื้อง");
         s[1] = new SnackAndSweet("เฟรนช์ฟราย");
         s[2] = new SnackAndSweet("ลูกชิ้นทอด");

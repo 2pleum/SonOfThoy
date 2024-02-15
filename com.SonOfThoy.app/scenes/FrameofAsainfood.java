@@ -1,9 +1,11 @@
+package scenes;
+
 import javax.swing.*;
 import java.awt.*;
 
-public  class FrameofAsainfood extends JFrame {
+public class FrameofAsainfood extends JFrame {
 
-    FrameofAsainfood(){
+    FrameofAsainfood() {
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         this.getContentPane().setLayout(null);
         this.setVisible(true);

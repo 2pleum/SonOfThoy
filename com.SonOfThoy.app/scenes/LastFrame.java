@@ -1,9 +1,13 @@
-import javax.swing.JFrame;
+package scenes;
+
+import ui.LastLabel;
+
+import javax.swing.*;
 import java.awt.*;
 
-public class LastFrame extends  JFrame {
-//    private char type;
-    LastFrame() {
+public class LastFrame extends JFrame {
+    //    private char type;
+    public LastFrame() {
         LastLabel lastL = new LastLabel(this);
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         this.getContentPane().setLayout(null);

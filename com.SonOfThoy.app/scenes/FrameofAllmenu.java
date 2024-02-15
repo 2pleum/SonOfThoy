@@ -1,9 +1,11 @@
+package scenes;
+
 import javax.swing.*;
 import java.awt.*;
 
-public  class FrameofAllmenu extends JFrame {
+public class FrameofAllmenu extends JFrame {
 
-    FrameofAllmenu(){
+    FrameofAllmenu() {
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         this.getContentPane().setLayout(null);
         this.setVisible(true);
