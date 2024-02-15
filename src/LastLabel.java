@@ -13,7 +13,7 @@ public class LastLabel {
     public LastLabel(LastFrame lastF) {
         this.lastF = lastF;
         thoyL = new JLabel();
-        Image img = new Image();git
+        Image img = new Image();
 //        thoy.setText("Kuy");
 
 //        thoyL.setPreferredSize(new Dimension(200, 100));
