@@ -1,29 +1,29 @@
 package scenes;
 
 import ui.ButtonToStart;
-
 import javax.swing.*;
 import java.awt.*;
-
-public class MainFrame extends JFrame {
+public class MainFrame extends JFrame{
 
     public MainFrame() {
-        // สร้างอ็อบเจ็กต์ของ ui.ButtontoStart
-        ButtonToStart startButton = new ButtonToStart(this);
+        // สร้างอ็อบเจ็กต์ของ ButtontoStart
+        ButtonToStart startButton;
+        startButton = new ButtonToStart(this);
 
-        // ตั้งค่าของ scenes.MainFrame
+        // ตั้งค่าของ MainFrame
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        this.getContentPane().setLayout(null);
+        this.setLayout(null); // ใช้ null layout
         this.setVisible(true);
         this.setSize(screenSize.getSize());
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setLocationRelativeTo(null);
-        this.setLayout(new FlowLayout(FlowLayout.CENTER)); // ใช้ FlowLayout และตั้งค่าให้อยู่ตรงกลาง
-        this.add(startButton); // เพิ่มปุ่มลงใน scenes.MainFrame
+        this.setLocationRelativeTo(null); // ทำให้อยู่ตรงกลาง
+        float w = startButton.getIconWidth();
+        float h = startButton.getIconHeight();
+        startButton.setBounds((int)((this.getWidth() - 300) / 2), (int)((this.getHeight() - 300) / 2), 300, 300);
 
-        this.setVisible(true);
-        // เพิ่มปุ่มลงใน scenes.MainFrame
+        // เพิ่มปุ่มลงใน MainFrame
+        this.add(startButton);
 
-        // ทำให้ scenes.MainFrame ปรากฏ
     }
+
 }

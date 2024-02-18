@@ -23,11 +23,15 @@ public class RandomB implements ActionListener {
         //ThaiF
 
     }
+    public void setType(char x){
+        type = x;
+    }
 
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == randomButton) {
             ranF.setVisible(false);
             yesOrNoFrame yesNoF = new yesOrNoFrame();
+            yesNoF.setType(type);
         }
     }
 

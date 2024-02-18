@@ -8,6 +8,7 @@ public class RandomFrame extends JFrame {
 
     public RandomFrame() {
         RandomB ranB = new RandomB(this);
+        ranB.setType(type);
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         this.getContentPane().setLayout(null);
         this.setVisible(true);
@@ -25,10 +26,6 @@ public class RandomFrame extends JFrame {
 
     public void setType(char x) {
         type = x;
-    }
-
-    public char getTypeFood() {
-        return type;
     }
 }
 
