@@ -5,16 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="87fd6adb-c9c6-4198-a8cd-456af64ed8c4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/com.SonOfThoy.app/img/S__4571152.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.SonOfThoy.app/scenes/LastFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.SonOfThoy.app/scenes/LastFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.SonOfThoy.app/scenes/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.SonOfThoy.app/scenes/MainFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.SonOfThoy.app/scenes/yesOrNoFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.SonOfThoy.app/scenes/yesOrNoFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.SonOfThoy.app/ui/ButtonToStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.SonOfThoy.app/ui/ButtonToStart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.SonOfThoy.app/ui/LastLabel.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.SonOfThoy.app/ui/LastLabel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.SonOfThoy.app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.SonOfThoy.app/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/com.SonOfThoy.app/ui/yesNoLabel.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.SonOfThoy.app/ui/yesNoLabel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.SonOfThoy.app/utils/RandomB.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.SonOfThoy.app/utils/RandomB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.SonOfThoy.app/utils/RandomFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.SonOfThoy.app/utils/RandomFrame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,23 +29,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Application.SonOfThoy.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "HEE",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/java/mysugar/SonOfThoy/com.SonOfThoy.app/img",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SonOfThoy.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;HEE&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/java/mysugar/SonOfThoy/com.SonOfThoy.app/img&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\java\mysugar\SonOfThoy\com.SonOfThoy.app\img" />
@@ -88,7 +81,8 @@
       <workItem from="1707997451498" duration="311000" />
       <workItem from="1708191182215" duration="80000" />
       <workItem from="1708241877968" duration="2483000" />
-      <workItem from="1708251741621" duration="907000" />
+      <workItem from="1708251741621" duration="1002000" />
+      <workItem from="1708333030705" duration="533000" />
     </task>
     <servers />
   </component>

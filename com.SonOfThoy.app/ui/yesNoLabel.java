@@ -1,6 +1,7 @@
 package ui;
 
 import scenes.yesOrNoFrame;
+import utils.Randomizer;
 
 import javax.swing.*;
 
@@ -21,6 +22,7 @@ public class yesNoLabel {
         //H healthy
         //W weaster
         //S ขนม
+//        Randomizer rd = new Randomizer();
         nameFood.setBounds(100, 500, 200, 400);
     }
     public void setType(char x){
