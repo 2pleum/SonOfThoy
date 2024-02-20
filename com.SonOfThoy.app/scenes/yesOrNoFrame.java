@@ -12,6 +12,7 @@ public class yesOrNoFrame extends JFrame {
     public yesOrNoFrame() {
         yesNoButton yesNoB = new yesNoButton(this);
         yesNoLabel yesNoL = new yesNoLabel(this);
+        yesNoL.setType(type);
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         this.getContentPane().setLayout(null);
         this.setVisible(true);
@@ -27,9 +28,9 @@ public class yesOrNoFrame extends JFrame {
         //            this.setBackground(Color.BLACK); //ใส่สีหลังไงวะ
         this.setVisible(true);
     }
-//    public void setType(char x){
-//        type = x;
-//    }
+    public void setType(char x){
+        type = x;
+    }
 //    public char getTypeFood(){
 //        return type;
 //    }
