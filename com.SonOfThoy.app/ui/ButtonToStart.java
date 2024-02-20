@@ -7,13 +7,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
-public class ButtonToStart extends JButton implements ActionListener {
-    private final MainFrame mainFrame;
+public class ButtonToStart extends JButton {
+//    private final MainFrame mainFrame;
     private final ImageIcon image;
     private final Image images;
 
     public ButtonToStart(MainFrame mainFrame) {
-        this.mainFrame = mainFrame;
+        //this.mainFrame = mainFrame;
+
         //this.labelOfStarts = labelOfStarts;
         image = new ImageIcon("img/start1.png");
         //imageS.getImage().getScaledInstance(100, 100, Image.SCALE_SMOOTH);
@@ -24,26 +25,8 @@ public class ButtonToStart extends JButton implements ActionListener {
         this.setContentAreaFilled(false);
         this.setBorderPainted(false);
         this.setBorder(BorderFactory.createEmptyBorder());
-        this.addActionListener(this);
+        //this.addActionListener(this);
 
-    }
-
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == this) {
-            // ปิดหน้าต่าง scenes.MainFrame
-            this.setVisible(false);
-
-            LabelOfStarts labelOfStarts = new LabelOfStarts();
-            labelOfStarts.setBounds((int)((mainFrame.getWidth() - labelOfStarts.getWidth()) / 2), (int)((mainFrame.getHeight() - labelOfStarts.getHeight()) / 2), (int)labelOfStarts.getWidth(), (int) labelOfStarts.getHeight());
-
-            mainFrame.add(labelOfStarts);
-            labelOfStarts.setVisible(true);
-            mainFrame.setVisible(false);
-            // เปิดหน้าต่าง MenuFrame
-            MenuFrame menuframe = new MenuFrame();
-             menuframe.setVisible(true); // เรียกใช้ setVisible(true) เพื่อให้ scenes.Menuframe ปรากฏบนหน้าจอ
-        }
     }
 
     public float getIconHeight(){

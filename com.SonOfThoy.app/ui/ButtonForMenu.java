@@ -22,30 +22,37 @@ public class ButtonForMenu implements ActionListener {
 
     public ButtonForMenu(MenuFrame menuframe) {
         this.menuframe = menuframe;
+        int hc = menuframe.getHeightscene();
+        int wc = menuframe.getWeightscene();
         // สร้าง JButton สำหรับเมนูทั้งหมด
         allmenuButton = new JButton("All Menu");
-        allmenuButton.setPreferredSize(new Dimension(200, 100));
+        allmenuButton.setBounds((wc/2) + 400, (hc/2) + 250 , 200, 100);
         allmenuButton.addActionListener(this);
 
         // สร้าง JButton สำหรับอาหารไทย
         thaiFoodButton = new JButton("Thai Food");
-        thaiFoodButton.setPreferredSize(new Dimension(200, 100));
+        //thaiFoodButton.setPreferredSize(new Dimension(200, 100));
+        thaiFoodButton.setBounds((wc/2) + 400, (hc/2) + 370 , 200, 100);
         thaiFoodButton.addActionListener(this);
 
         asianFoodButton = new JButton("Asian Food");
-        asianFoodButton.setPreferredSize(new Dimension(200, 100));
+        //asianFoodButton.setPreferredSize(new Dimension(200, 100));
+        asianFoodButton.setBounds((wc/2) + 400, (hc/2) + 490 , 200, 100);
         asianFoodButton.addActionListener(this);
 
         westernFoodButton = new JButton("Western Food");
-        westernFoodButton.setPreferredSize(new Dimension(200, 100));
+        //westernFoodButton.setPreferredSize(new Dimension(200, 100));
+        westernFoodButton.setBounds((wc/2) + 750, (hc/2) + 250 , 200, 100);
         westernFoodButton.addActionListener(this);
 
         healthyFoodButton = new JButton("Healthy Food");
-        healthyFoodButton.setPreferredSize(new Dimension(200, 100));
+        //healthyFoodButton.setPreferredSize(new Dimension(200, 100));
+        healthyFoodButton.setBounds((wc/2) + 750, (hc/2) + 370 , 200, 100);
         healthyFoodButton.addActionListener(this);
 
         snackButton = new JButton("Snack&Sweet");
-        snackButton.setPreferredSize(new Dimension(200, 100));
+        //snackButton.setPreferredSize(new Dimension(200, 100));
+        snackButton.setBounds((wc/2) + 750, (hc/2) + 490 , 200, 100);
         snackButton.addActionListener(this);
     }
 
@@ -87,7 +94,7 @@ public class ButtonForMenu implements ActionListener {
 
 
     // เมทอดสำหรับคืนค่า JButton สำหรับเมนูทั้งหมด
-    public JButton getAllmenuButton() {
+    public JButton getAllMenuButton() {
         return allmenuButton;
     }
 
@@ -108,9 +115,7 @@ public class ButtonForMenu implements ActionListener {
         return healthyFoodButton;
     }
 
-    public JButton getSnackButton() {
-        return snackButton;
-    }
+    public JButton getSnackButton() { return snackButton; }
 
 
 }

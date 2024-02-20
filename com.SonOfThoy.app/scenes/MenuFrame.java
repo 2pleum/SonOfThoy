@@ -15,10 +15,12 @@ public class MenuFrame extends JFrame {
         this.setSize(screenSize.getSize());
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
-        this.setLayout(new FlowLayout(FlowLayout.CENTER)); // กำหนด Layout เป็น null เพื่อให้สามารถกำหนดตำแหน่งของปุ่มเองได้
+        //this.setLayout(new FlowLayout(FlowLayout.CENTER)); // กำหนด Layout เป็น null เพื่อให้สามารถกำหนดตำแหน่งของปุ่มเองได้
+        this.setLayout(null);
+
 
         // เพิ่มปุ่มเมนูที่ต่าง ๆ ลงในหน้าต่าง scenes.Menuframe
-        this.add(buttonforMenu.getAllmenuButton());
+        this.add(buttonforMenu.getAllMenuButton());
         this.add(buttonforMenu.getThaiFoodButton());
         this.add(buttonforMenu.getAsianFoodButton()); // เพิ่มปุ่ม Asian Food
         this.add(buttonforMenu.getWesternFoodButton()); // เพิ่มปุ่ม Fast Food
@@ -28,7 +30,11 @@ public class MenuFrame extends JFrame {
         this.setVisible(true);
     }
 
-    // public static void main(String[] args) {
-    //     scenes.Menuframe menuframe = new scenes.Menuframe();
-    // }
+    public int getWeightscene(){
+        return this.getWidth();
+    }
+
+    public int getHeightscene(){
+        return this.getHeight();
+    }
 }
