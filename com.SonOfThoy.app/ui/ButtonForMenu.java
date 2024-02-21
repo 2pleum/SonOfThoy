@@ -2,7 +2,6 @@ package ui;
 
 import scenes.MenuFrame;
 import utils.RandomFrame;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -54,6 +53,7 @@ public class ButtonForMenu implements ActionListener {
         //snackButton.setPreferredSize(new Dimension(200, 100));
         snackButton.setBounds((wc/2) + 750, (hc/2) + 490 , 200, 100);
         snackButton.addActionListener(this);
+
     }
 
     @Override
@@ -116,6 +116,5 @@ public class ButtonForMenu implements ActionListener {
     }
 
     public JButton getSnackButton() { return snackButton; }
-
 
 }
