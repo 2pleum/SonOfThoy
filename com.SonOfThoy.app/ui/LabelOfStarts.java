@@ -4,6 +4,7 @@ import scenes.MainFrame;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.Objects;
 
 public class LabelOfStarts extends JLabel {
     private final Image images;

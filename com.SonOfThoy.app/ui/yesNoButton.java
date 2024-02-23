@@ -6,6 +6,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Objects;
 
 public class yesNoButton  {
     private final JButton yesB;
@@ -14,8 +15,13 @@ public class yesNoButton  {
     private final  ImageIcon pno;
     private final Image psyes;
     private final Image psno;
+    private final yesOrNoFrame yesNoF;
+    private char type;
 
-    public yesNoButton() {
+    public yesNoButton(yesOrNoFrame yesNoF,char x) {
+        type = x;
+        this.yesNoF = yesNoF;
+
         //Yes
         yesB = new JButton();
         pyes = new ImageIcon("img/yes1.png");

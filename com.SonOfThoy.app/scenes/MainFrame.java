@@ -9,11 +9,13 @@ import java.awt.event.ActionListener;
 public class MainFrame extends JFrame implements ActionListener {
     private final ButtonToStart startButton;
     private final LabelOfStarts labelOfStarts;
+    private final JLabel thoy;
 
     public MainFrame() {
         // สร้างอ็อบเจ็กต์ของ ButtontoStart
         labelOfStarts = new LabelOfStarts();
         startButton = new ButtonToStart();
+        thoy = new JLabel();
         // ตั้งค่าของ MainFrame
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLayout(null); // ใช้ null layout
@@ -21,7 +23,7 @@ public class MainFrame extends JFrame implements ActionListener {
         this.setSize(screenSize.getSize());
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null); // ทำให้อยู่ตรงกลาง
-        this.getContentPane().setBackground(new Color(0xC6EFFD));
+        this.getContentPane().setBackground(new Color(0xFDD4F0));
 
         float w = startButton.getIconWidth();
         float h = startButton.getIconHeight();
@@ -33,15 +35,24 @@ public class MainFrame extends JFrame implements ActionListener {
         float hl = labelOfStarts.getIconHeight();
         labelOfStarts.setBounds((int)((this.getWidth() - wl) / 2), (int)((this.getHeight() - hl) / 2), (int)wl, (int) hl);
 
-
+        ImageIcon pthoy = new ImageIcon("png/thoy.gif");
+        Image pt = pthoy.getImage().getScaledInstance(200,200, Image.SCALE_SMOOTH);
+        thoy.setIcon(new ImageIcon(pt));
+        thoy.setOpaque(false);
+        thoy.setBorder(BorderFactory.createEmptyBorder());
+        //thoy.setBounds(50, this.getHeight()-pt.getHeight(null), pt.getWidth(null), pt.getHeight(null));
+        thoy.setBounds(200,200 ,pt.getWidth(null), pt.getHeight(null));
 
         // เพิ่มปุ่มลงใน MainFrame
         this.add(startButton);
         this.add(labelOfStarts);
+        this.add(thoy);
         labelOfStarts.setVisible(false);
         startButton.setVisible(true);
+        thoy.setVisible(true);
 
     }
+
 
 
     @Override
@@ -52,12 +63,11 @@ public class MainFrame extends JFrame implements ActionListener {
 
             // ให้ Label แสดงก่อนด้วย SwingUtilities.invokeLater()
             SwingUtilities.invokeLater(() -> {
-                // ปิดหน้าต่าง scenes.MainFrame
-                this.setVisible(false);
-
                 // สร้างและแสดงหน้าต่าง MenuFrame
                 MenuFrame menuframe = new MenuFrame();
                 menuframe.setVisible(true);
+                // ปิดหน้าต่าง scenes.MainFrame
+                this.setVisible(false);
             });
         }
     }
@@ -72,6 +82,4 @@ public class MainFrame extends JFrame implements ActionListener {
         MenuFrame menuframe = new MenuFrame();
         menuframe.setVisible(true); // เรียกใช้ setVisible(true) เพื่อให้ scenes.Menuframe ปรากฏบนหน้าจอ
     }
-
-
 }

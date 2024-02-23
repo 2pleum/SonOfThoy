@@ -19,39 +19,82 @@ public class ButtonForMenu implements ActionListener {
     private final MenuFrame menuframe;
     private char type;
 
+    private Image alls;
+    private Image thais;
+    private Image asians;
+    private Image wests;
+    private Image healthys;
+    private Image snacks;
+
     public ButtonForMenu(MenuFrame menuframe) {
         this.menuframe = menuframe;
-        int hc = menuframe.getHeightscene();
-        int wc = menuframe.getWeightscene();
+
+
         // สร้าง JButton สำหรับเมนูทั้งหมด
-        allmenuButton = new JButton("All Menu");
-        allmenuButton.setBounds((wc/2) + 400, (hc/2) + 250 , 200, 100);
+        allmenuButton = new JButton();
+        ImageIcon all = new ImageIcon("img/all.png");
+        alls = all.getImage().getScaledInstance(200,200, Image.SCALE_SMOOTH);
+        allmenuButton.setIcon(new ImageIcon(alls));
+        allmenuButton.setOpaque(false);
+        allmenuButton.setContentAreaFilled(false);
+        allmenuButton.setBorderPainted(false);
+        allmenuButton.setBorder(BorderFactory.createEmptyBorder());
         allmenuButton.addActionListener(this);
 
+
         // สร้าง JButton สำหรับอาหารไทย
-        thaiFoodButton = new JButton("Thai Food");
-        //thaiFoodButton.setPreferredSize(new Dimension(200, 100));
-        thaiFoodButton.setBounds((wc/2) + 400, (hc/2) + 370 , 200, 100);
+        thaiFoodButton = new JButton();
+        ImageIcon thai = new ImageIcon("img/thai.png");
+        thais = thai.getImage().getScaledInstance(200,200, Image.SCALE_SMOOTH);
+        thaiFoodButton.setIcon(new ImageIcon(thais));
+        thaiFoodButton.setOpaque(false);
+        thaiFoodButton.setContentAreaFilled(false);
+        thaiFoodButton.setBorderPainted(false);
+        thaiFoodButton.setBorder(BorderFactory.createEmptyBorder());
         thaiFoodButton.addActionListener(this);
 
-        asianFoodButton = new JButton("Asian Food");
-        //asianFoodButton.setPreferredSize(new Dimension(200, 100));
-        asianFoodButton.setBounds((wc/2) + 400, (hc/2) + 490 , 200, 100);
+
+        asianFoodButton = new JButton();
+        ImageIcon asian = new ImageIcon("img/asian.png");
+        asians = asian.getImage().getScaledInstance(200,200, Image.SCALE_SMOOTH);
+        asianFoodButton.setIcon(new ImageIcon(asians));
+        asianFoodButton.setOpaque(false);
+        asianFoodButton.setContentAreaFilled(false);
+        asianFoodButton.setBorderPainted(false);
+        asianFoodButton.setBorder(BorderFactory.createEmptyBorder());
         asianFoodButton.addActionListener(this);
 
-        westernFoodButton = new JButton("Western Food");
-        //westernFoodButton.setPreferredSize(new Dimension(200, 100));
-        westernFoodButton.setBounds((wc/2) + 750, (hc/2) + 250 , 200, 100);
+
+        westernFoodButton = new JButton();
+        ImageIcon west = new ImageIcon("img/western.png");
+        wests = west.getImage().getScaledInstance(200,200, Image.SCALE_SMOOTH);
+        westernFoodButton.setIcon(new ImageIcon(wests));
+        westernFoodButton.setOpaque(false);
+        westernFoodButton.setContentAreaFilled(false);
+        westernFoodButton.setBorderPainted(false);
+        westernFoodButton.setBorder(BorderFactory.createEmptyBorder());
         westernFoodButton.addActionListener(this);
 
-        healthyFoodButton = new JButton("Healthy Food");
-        //healthyFoodButton.setPreferredSize(new Dimension(200, 100));
-        healthyFoodButton.setBounds((wc/2) + 750, (hc/2) + 370 , 200, 100);
+
+        healthyFoodButton = new JButton();
+        ImageIcon healthy = new ImageIcon("img/clean.png");
+        healthys = healthy.getImage().getScaledInstance(200,200, Image.SCALE_SMOOTH);
+        healthyFoodButton.setIcon(new ImageIcon(healthys));
+        healthyFoodButton.setOpaque(false);
+        healthyFoodButton.setContentAreaFilled(false);
+        healthyFoodButton.setBorderPainted(false);
+        healthyFoodButton.setBorder(BorderFactory.createEmptyBorder());
         healthyFoodButton.addActionListener(this);
 
-        snackButton = new JButton("Snack&Sweet");
-        //snackButton.setPreferredSize(new Dimension(200, 100));
-        snackButton.setBounds((wc/2) + 750, (hc/2) + 490 , 200, 100);
+
+        snackButton = new JButton();
+        ImageIcon snack = new ImageIcon("img/snack.png");
+        snacks = snack.getImage().getScaledInstance(200,200, Image.SCALE_SMOOTH);
+        snackButton.setIcon(new ImageIcon(snacks));
+        snackButton.setOpaque(false);
+        snackButton.setContentAreaFilled(false);
+        snackButton.setBorderPainted(false);
+        snackButton.setBorder(BorderFactory.createEmptyBorder());
         snackButton.addActionListener(this);
 
     }
@@ -60,36 +103,34 @@ public class ButtonForMenu implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == allmenuButton) {
             type = 'A';
+            RandomFrame ranf = new RandomFrame(type);
             menuframe.setVisible(false);
-            RandomFrame ranf = new RandomFrame();
-            ranf.setType(type);
+
         } else if (e.getSource() == thaiFoodButton) {
             type = 'T';
+            RandomFrame ranf = new RandomFrame(type);
             menuframe.setVisible(false);
-            RandomFrame ranf = new RandomFrame();
-            ranf.setType(type);
+
         } else if (e.getSource() == asianFoodButton) {
             type = 'I';
+            RandomFrame ranf = new RandomFrame(type);
             menuframe.setVisible(false);
-            RandomFrame ranf = new RandomFrame();
-            ranf.setType(type);
+
         } else if (e.getSource() == healthyFoodButton) {
             type = 'H';
+            RandomFrame ranf = new RandomFrame(type);
             menuframe.setVisible(false);
-            RandomFrame ranf = new RandomFrame();
-            ranf.setType(type);
+
         } else if (e.getSource() == westernFoodButton) {
             type = 'W';
+            RandomFrame ranf = new RandomFrame(type);
             menuframe.setVisible(false);
-            RandomFrame ranf = new RandomFrame();
-            ranf.setType(type);
+
         } else if (e.getSource() == snackButton) {
             type = 'S';
+            RandomFrame ranf = new RandomFrame(type);
             menuframe.setVisible(false);
-            RandomFrame ranf = new RandomFrame();
-            ranf.setType(type);
         }
-
     }
 
 

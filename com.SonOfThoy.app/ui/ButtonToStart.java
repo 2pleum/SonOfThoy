@@ -5,6 +5,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Objects;
 
 
 public class ButtonToStart extends JButton {
@@ -16,7 +17,6 @@ public class ButtonToStart extends JButton {
         image = new ImageIcon("img/start1.png");
         images = image.getImage().getScaledInstance(300,300, Image.SCALE_SMOOTH);
         this.setIcon(new ImageIcon(images)); // Convert Image to ImageIcon before setting it as icon
-        this.setPreferredSize(new Dimension(images.getWidth(null), images.getHeight(null))); // Provide null as ImageObserver
         this.setOpaque(false);
         this.setContentAreaFilled(false);
         this.setBorderPainted(false);
