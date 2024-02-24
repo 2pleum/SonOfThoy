@@ -6,6 +6,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Objects;
 
 
 public class ButtonForMenu implements ActionListener {
@@ -18,7 +19,6 @@ public class ButtonForMenu implements ActionListener {
     private final JButton snackButton;
     private final MenuFrame menuframe;
     private char type;
-
     private Image alls;
     private Image thais;
     private Image asians;
@@ -134,6 +134,7 @@ public class ButtonForMenu implements ActionListener {
     }
 
 
+
     // เมทอดสำหรับคืนค่า JButton สำหรับเมนูทั้งหมด
     public JButton getAllMenuButton() {
         return allmenuButton;
@@ -157,5 +158,6 @@ public class ButtonForMenu implements ActionListener {
     }
 
     public JButton getSnackButton() { return snackButton; }
+
 
 }

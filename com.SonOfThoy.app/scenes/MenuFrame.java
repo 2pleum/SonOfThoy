@@ -1,7 +1,7 @@
 package scenes;
-
+import ui.exitButton;
 import ui.ButtonForMenu;
-
+import ui.goHomeButton;
 import javax.swing.*;
 import java.awt.*;
 
@@ -9,62 +9,59 @@ public class MenuFrame extends JFrame {
 
     public MenuFrame() {
         ButtonForMenu buttonforMenu = new ButtonForMenu(this);
+        goHomeButton goHome = new goHomeButton(this,'M');
+        exitButton outNaJa = new exitButton(this,'M');
+
+
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        this.getContentPane().setLayout(null);
-        this.setVisible(true);
         this.setSize(screenSize.getSize());
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
         this.getContentPane().setBackground(new Color(0xFDD4F0));
-        //this.setLayout(new FlowLayout(FlowLayout.CENTER)); // กำหนด Layout เป็น null เพื่อให้สามารถกำหนดตำแหน่งของปุ่มเองได้
-        this.setLayout(new GridBagLayout());
-        GridBagConstraints gbc = new GridBagConstraints();
+        this.setLayout(null);
 
+        int r = (this.getWidth() - 600)/2;
+        int h = (this.getHeight()/2) - 150;
 
         // เพิ่มปุ่มเมนูที่ต่าง ๆ ลงในหน้าต่าง scenes.Menuframe
         JButton all = buttonforMenu.getAllMenuButton();
-        gbc.gridx = 0; // ตำแหน่งในแนวแกน X
-        gbc.gridy = 0; // ตำแหน่งในแนวแกน Y
-        gbc.insets = new Insets(0, 10, 10, 10); // ระยะห่างของปุ่มจากขอบ
-        this.add(all, gbc); // เพิ่มปุ่มลงใน JFrame
+        all.setBounds(r, h, 200, 200);
+        this.add(all);
 
 
         JButton thai = buttonforMenu.getThaiFoodButton();
-        gbc.gridx = 1; // ตำแหน่งในแนวแกน X
-        gbc.gridy = 0; // ตำแหน่งในแนวแกน Y
-        gbc.insets = new Insets(0, 10, 10, 10); // ระยะห่างของปุ่มจากขอบ
-        this.add(thai, gbc); // เพิ่มปุ่มลงใน JFrame
+        thai.setBounds(r + 200, h, 200, 200);
+        this.add(thai);
 
 
         JButton asian = buttonforMenu.getAsianFoodButton();
-        gbc.gridx = 2; // ตำแหน่งในแนวแกน X
-        gbc.gridy = 0; // ตำแหน่งในแนวแกน Y
-        gbc.insets = new Insets(0, 10, 10, 10); // ระยะห่างของปุ่มจากขอบ
-        this.add(asian, gbc); // เพิ่มปุ่มลงใน JFrame
+        asian.setBounds(r + 400, h ,200, 200);
+        this.add(asian);
 
 
         JButton healthy = buttonforMenu.getHealthyFoodButton();
-        gbc.gridx = 0; // ตำแหน่งในแนวแกน X
-        gbc.gridy = 1; // ตำแหน่งในแนวแกน Y
-        gbc.gridwidth = 1;
-        gbc.insets = new Insets(0, 10, 10, 10); // ระยะห่างของปุ่มจากขอบ
-        this.add(healthy, gbc); // เพิ่มปุ่มลงใน JFrame
+        healthy.setBounds(r, h +200, 200, 200);
+        this.add(healthy);
+
 
         JButton west = buttonforMenu.getWesternFoodButton();
-        gbc.gridx = 1; // ตำแหน่งในแนวแกน X
-        gbc.gridy = 1; // ตำแหน่งในแนวแกน Y
-        gbc.gridwidth = 1;
-        gbc.insets = new Insets(0, 10, 10, 10); // ระยะห่างของปุ่มจากขอบ
-        this.add(west, gbc); // เพิ่มปุ่มลงใน JFrame
+        west.setBounds(r+200, h + 200, 200, 200);
+        this.add(west);
+
 
         JButton snack = buttonforMenu.getSnackButton();
-        gbc.gridx = 2; // ตำแหน่งในแนวแกน X
-        gbc.gridy = 1; // ตำแหน่งในแนวแกน Y
-        gbc.gridwidth = 1;
-        gbc.insets = new Insets(0, 10, 10, 10); // ระยะห่างของปุ่มจากขอบ
-        this.add(snack, gbc); // เพิ่มปุ่มลงใน JFrame
+        snack.setBounds(r+400, h + 200, 200, 200);
+        this.add(snack);
 
 
+        JButton outNaja = outNaJa.getOutButton();
+        outNaja.setBounds(this.getWidth()-60,0,50,50);
+        this.add(outNaja);
+
+
+        JButton home = goHome.getHomeButton();
+        home.setBounds(this.getWidth()-110,0,50,50);
+        this.add(home);
 
         this.setVisible(true);
     }

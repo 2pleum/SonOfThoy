@@ -1,9 +1,7 @@
 package scenes;
 
 import foods.*;
-import ui.LabelOfYesNo;
-import ui.yesNoButton;
-import ui.yesNoLabel;
+import ui.*;
 import utils.RandomFrame;
 import utils.Randomizer;
 
@@ -36,6 +34,20 @@ public class yesOrNoFrame extends JFrame implements ActionListener {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
         this.getContentPane().setBackground(new Color(0xFDD4F0));
+
+
+        // ปุ่มไปบ้าน
+        goHomeButton goHome = new goHomeButton(this,'Y');
+        JButton home = goHome.getHomeButton();
+        home.setBounds(this.getWidth()-110,0,50,50);
+        this.add(home);
+        //ปุ่มออก
+        exitButton outNaJa = new exitButton(this,'Y');
+        JButton outNaja = outNaJa.getOutButton();
+        outNaja.setBounds(this.getWidth()-60,0,50,50);
+        this.add(outNaja); // เพิ่มปุ่มลงใน JFrame
+
+
 
         // เพิ่มปุ่มเมนูที่ต่าง ๆ ลงในหน้าต่าง scenes.Menuframe
         yesB = yesNoB.getYesB();
@@ -151,7 +163,6 @@ public class yesOrNoFrame extends JFrame implements ActionListener {
             });
         }
     }
-
 
 }
 

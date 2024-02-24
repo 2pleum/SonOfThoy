@@ -1,29 +1,91 @@
 package utils;
 
+import foods.*;
+import scenes.LastFrame;
+import scenes.yesOrNoFrame;
+import ui.*;
+
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+//
 
-public class RandomFrame extends JFrame {
+import java.awt.event.ActionListener;
+
+public class RandomFrame extends JFrame implements ActionListener {
     private char type;
+    private final JButton ranB;
+    private final JLabel ranL;
+
 
     public RandomFrame(char x) {
         type = x;
-        RandomB ranB = new RandomB(this);
-        ranB.setType(type);
+        //
+
+        RandomB randomB = new RandomB(this, type);
+        LabelToRandom ranLabel = new LabelToRandom();
+
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        this.getContentPane().setLayout(null);
+        this.setLayout(null);
         this.setVisible(true);
         this.setSize(screenSize.getSize());
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
         this.getContentPane().setBackground(new Color(0xFDD4F0));
-        this.setLayout(new FlowLayout(FlowLayout.CENTER)); // กำหนด Layout เป็น null เพื่อให้สามารถกำหนดตำแหน่งของปุ่มเองได้
 
-        // เพิ่มปุ่มเมนูที่ต่าง ๆ ลงในหน้าต่าง scenes.Menuframe
-        this.add(ranB.getRandomButton1());
-        //เราจะรุู้ได้ไงว่าปุ่มไหนต้องสุ่มอันไหนยังไง สร้างcharบอกชนิด ดีมั้ยจะได้้ไม่ต้องทำrandom 6 ปุม
-        //            this.setBackground(Color.BLACK); //ใส่สีหลังไงวะ
+
+        //
+        goHomeButton goHome = new goHomeButton(this, 'R');
+        JButton home = goHome.getHomeButton();
+        home.setBounds(this.getWidth()-110,0,50,50);
+        this.add(home);
+
+
+        //
+        exitButton outNaJa = new exitButton(this, 'R');
+        JButton outNaja = outNaJa.getOutButton();
+        outNaja.setBounds(this.getWidth()-60,0,50,50);
+        this.add(outNaja);
+
+
+        ranB = randomB.getRandomButton1();
+        int wb = randomB.getWeightRanPic();
+        int hb = randomB.getHeightRanPic();
+        ranB.setBounds(((this.getWidth() - wb) / 2), ((this.getHeight() - hb) / 2), wb, hb);
+        ranB.addActionListener(this);
+
+
+        ranL = ranLabel.getRanL();
+        int wl = ranLabel.getweightRan();
+        int hl = ranLabel.getheightRan();
+        ranL.setBounds(((this.getWidth() - wl) / 2), ((this.getHeight() - hl) / 2), wl, hl);
+
+
+        this.add(ranB);
+        this.add(ranL);
+        ranB.setVisible(true);
+        ranL.setVisible(false);
         this.setVisible(true);
+
+    }
+
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == ranB) {
+            ranL.setVisible(true);
+            ranB.setVisible(false);
+            // ให้ Label แสดงก่อนด้วย SwingUtilities.invokeLater()
+            SwingUtilities.invokeLater(() -> {
+                // ปิดหน้าต่าง scenes.MainFrame
+                this.setVisible(false);
+                yesOrNoFrame yesNoF = new yesOrNoFrame(type);
+
+                // สร้างและแสดงหน้าต่าง LastFrame
+            });
+        }
     }
 }
+
+
+
 

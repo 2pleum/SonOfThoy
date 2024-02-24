@@ -19,6 +19,8 @@ public class LastLabel {
 //        thoyL.setPreferredSize(new Dimension(200, 100));
         thoyL.setIcon(img.getThoyPic());
         thoyL.setBounds(0, 0, 1000, 1000);
+        //
+
 
     }
 
