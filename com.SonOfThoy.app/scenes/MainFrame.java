@@ -1,7 +1,6 @@
 package scenes;
 import ui.ButtonToStart;
 import ui.LabelOfStarts;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -36,18 +35,23 @@ public class MainFrame extends JFrame implements ActionListener {
         labelOfStarts.setBounds((int)((this.getWidth() - wl) / 2), (int)((this.getHeight() - hl) / 2), (int)wl, (int) hl);
 
         JLabel thoy = setThoy();
-        thoy.setBounds(0,this.getHeight()-300,300,300);
+        thoy.setBounds(0,this.getHeight()-400,200,400);
 
         JLabel lion = setLion();
-        lion.setBounds(100,this.getHeight()-310, 300, 300);
+        lion.setBounds(20,this.getHeight()-400, 400, 400);
+
+        JLabel logo = setLogo();
+        logo.setBounds((this.getWidth()-450)/2, ((this.getHeight()-450)/2)-150, 450, 450);
 
         // เพิ่มปุ่มลงใน MainFrame
         this.add(buttonToStart);
         this.add(labelOfStarts);
         this.add(thoy);
         this.add(lion);
+        this.add(logo);
         thoy.setVisible(true);
         lion.setVisible(true);
+        logo.setVisible(true);
         buttonToStart.setVisible(true);
         labelOfStarts.setVisible(false);
         this.setVisible(true);
@@ -75,7 +79,7 @@ public class MainFrame extends JFrame implements ActionListener {
     public JLabel setThoy(){
         ImageIcon gifIcon = new ImageIcon("img/thoy.gif");
         // Resize GIF (optional)
-        Image gifImage = gifIcon.getImage().getScaledInstance(300, 300, Image.SCALE_DEFAULT);
+        Image gifImage = gifIcon.getImage().getScaledInstance(400, 400, Image.SCALE_DEFAULT);
         ImageIcon resizedGifIcon = new ImageIcon(gifImage);
         JLabel gifLabel = new JLabel(resizedGifIcon);
 
@@ -85,11 +89,19 @@ public class MainFrame extends JFrame implements ActionListener {
     public  JLabel setLion(){
         ImageIcon gifIcon = new ImageIcon("img/lion.gif");
         // Resize GIF (optional)
-        Image gifImage = gifIcon.getImage().getScaledInstance(300, 300, Image.SCALE_DEFAULT);
+        Image gifImage = gifIcon.getImage().getScaledInstance(400, 400, Image.SCALE_DEFAULT);
         ImageIcon resizedGifIcon = new ImageIcon(gifImage);
         JLabel gifLabel = new JLabel(resizedGifIcon);
-
         return gifLabel;
+    }
+
+    public JLabel setLogo(){
+        ImageIcon gifIcon = new ImageIcon("img/SonOfThoy.png");
+        // Resize GIF (optional)
+        Image gifImage = gifIcon.getImage().getScaledInstance(450, 450, Image.SCALE_SMOOTH);
+        ImageIcon resizedGifIcon = new ImageIcon(gifImage);
+        JLabel logo = new JLabel(resizedGifIcon);
+        return logo;
     }
 
 }

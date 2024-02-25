@@ -20,6 +20,7 @@ public class MenuFrame extends JFrame {
         this.getContentPane().setBackground(new Color(0xFDD4F0));
         this.setLayout(null);
 
+
         int r = (this.getWidth() - 600)/2;
         int h = (this.getHeight()/2) - 150;
 

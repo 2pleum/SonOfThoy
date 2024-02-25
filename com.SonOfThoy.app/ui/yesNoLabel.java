@@ -16,8 +16,9 @@ public class yesNoLabel {
         this.yesNoF = yesNoF;
         nameFood = new JLabel();
         try {
-            Font customFont = Font.createFont(Font.TRUETYPE_FONT, new File("img/Myfont/RD CHULAJARUEK.ttf")).deriveFont(Font.BOLD,60f);
+            Font customFont = Font.createFont(Font.TRUETYPE_FONT, new File("img/Myfont/ZF#2ndPixelus.ttf")).deriveFont(80f);
             nameFood.setFont(customFont);
+            nameFood.setForeground(new Color(0x7C5A5A));
         } catch (IOException | FontFormatException e) {
             e.printStackTrace();
             // จัดการข้อผิดพลาด
@@ -33,7 +34,7 @@ public class yesNoLabel {
     public void setName(String n) {
         name = n;
         nameFood.setText(name);
-        nameFood.setBounds((yesNoF.getWidth() - (nameFood.getPreferredSize().width)+5) / 2, 250, nameFood.getPreferredSize().width+5, nameFood.getPreferredSize().height+20);
+        nameFood.setBounds((yesNoF.getWidth() - (nameFood.getPreferredSize().width)+5) / 2, yesNoF.getHeight()/2 - 230, nameFood.getPreferredSize().width+5, nameFood.getPreferredSize().height+20);
     }
 
 
