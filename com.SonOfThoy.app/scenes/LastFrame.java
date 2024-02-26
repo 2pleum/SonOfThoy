@@ -17,7 +17,7 @@ public class LastFrame extends JFrame {
         this.setSize(screenSize.getSize());
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
-        this.setLayout(new FlowLayout(FlowLayout.CENTER)); // กำหนด Layout เป็น null เพื่อให้สามารถกำหนดตำแหน่งของปุ่มเองได้
+        this.setLayout(null); // กำหนด Layout เป็น null เพื่อให้สามารถกำหนดตำแหน่งของปุ่มเองได้
 
         this.add(lastL.getThoyL()); //ข้อความไม่ออกกรี๊ด
 
@@ -32,7 +32,21 @@ public class LastFrame extends JFrame {
         outNaja.setBounds(this.getWidth()-60,0,50,50);
         this.add(outNaja); // เพิ่มปุ่มลงใน JFrame
 
+        JLabel back = setbackground();
+        this.add(back);
+        back.setVisible(true);
+        outNaja.setVisible(true);
+        home.setVisible(true);
 
         this.setVisible(true);
+    }
+
+    public JLabel setbackground(){
+        ImageIcon open = new ImageIcon("img/last.png");
+        Image gifImage = open.getImage().getScaledInstance(this.getHeight(), this.getHeight(), Image.SCALE_SMOOTH);
+        ImageIcon resizedGifIcon = new ImageIcon(gifImage);
+        JLabel back = new JLabel(resizedGifIcon);
+        back.setBounds((this.getWidth()/2) - (this.getHeight()/2),0,this.getHeight(),this.getHeight());
+        return back;
     }
 }

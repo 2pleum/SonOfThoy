@@ -67,4 +67,28 @@ public class MenuFrame extends JFrame {
         this.setVisible(true);
     }
 
+
+
+
+    public JLabel setThoy(){
+        ImageIcon gifIcon = new ImageIcon("img/thoy.gif");
+        // Resize GIF (optional)
+        Image gifImage = gifIcon.getImage().getScaledInstance(400, 400, Image.SCALE_DEFAULT);
+        ImageIcon resizedGifIcon = new ImageIcon(gifImage);
+        JLabel gifLabel = new JLabel(resizedGifIcon);
+
+        return gifLabel;
+    }
+
+    public  JLabel setLion(){
+        ImageIcon gifIcon = new ImageIcon("img/lion.gif");
+        // Resize GIF (optional)
+        Image gifImage = gifIcon.getImage().getScaledInstance(400, 400, Image.SCALE_DEFAULT);
+        ImageIcon resizedGifIcon = new ImageIcon(gifImage);
+        JLabel gifLabel = new JLabel(resizedGifIcon);
+        return gifLabel;
+    }
+
+
+
 }

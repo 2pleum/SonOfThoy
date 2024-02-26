@@ -11,7 +11,7 @@ public class LabelOfStarts extends JLabel {
     public LabelOfStarts() {
 
         ImageIcon image = new ImageIcon("img/start2.png");
-        images = image.getImage().getScaledInstance(300, 300, Image.SCALE_SMOOTH);
+        images = image.getImage().getScaledInstance(200, 200, Image.SCALE_SMOOTH);
         this.setIcon(new ImageIcon(images));
         this.setOpaque(false);
         this.setBorder(BorderFactory.createEmptyBorder());
