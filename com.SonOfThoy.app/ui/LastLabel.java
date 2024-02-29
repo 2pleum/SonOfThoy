@@ -4,28 +4,31 @@ import scenes.LastFrame;
 import utils.Image;
 
 import javax.swing.*;
+import java.awt.*;
+import java.io.File;
+import java.io.IOException;
 
 public class LastLabel {
-    private final JLabel thoyL;
-    private final LastFrame lastF;
-    private ImageIcon thoyPic;
+    private final JLabel nameFood;
+    private String name;
+    public LastLabel(LastFrame lastF,String name) {
+        this.name = name;
+        nameFood = new JLabel(name);
+        try {
+            Font customFont = Font.createFont(Font.TRUETYPE_FONT, new File("img/Myfont/ZF#2ndPixelus.ttf")).deriveFont(80f);
+            nameFood.setFont(customFont);
+            nameFood.setForeground(new Color(0x7C5A5A));
 
-    public LastLabel(LastFrame lastF) {
-        this.lastF = lastF;
-        thoyL = new JLabel();
-        utils.Image img = new Image();
-//        thoy.setText("Kuy");
-
-//        thoyL.setPreferredSize(new Dimension(200, 100));
-        thoyL.setIcon(img.getThoyPic());
-        thoyL.setBounds(0, 0, 1000, 1000);
-        //
+        } catch (IOException | FontFormatException e) {
+            e.printStackTrace();
+            // จัดการข้อผิดพลาด
+        }
 
 
     }
 
-    public JLabel getThoyL() {
-        return thoyL;
+    public JLabel getNameFood() {
+        return nameFood;
     }
 
 }

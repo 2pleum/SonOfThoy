@@ -4,15 +4,20 @@ import java.util.Arrays;
 
 public class Randomizer {
     protected int num;
-    private final int[] nlist;
-    private final int amount;
-    private int count = 0;
+    private int [] nlist;
+    private int amount;
+    private int count;
     private boolean check, checkOk;
 
     public Randomizer(int amount) {
         this.amount = amount;
-        nlist = new int[amount + 1];
-//        randomNumber();
+        nlist = new int[amount];
+    }
+
+    public Randomizer(int amount,int [] nlist,int count) {
+        this.amount = amount;
+        this.nlist = nlist;
+        this.count = count;
     }
 
     public void randomNumber() {
@@ -43,4 +48,8 @@ public class Randomizer {
     public int getIndex() {
         return num;
     }
+    public int getCount() {
+        return  count;
+    }
+    public int [] getNlist() {return nlist;}
 }

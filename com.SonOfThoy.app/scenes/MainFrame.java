@@ -66,13 +66,14 @@ public class MainFrame extends JFrame implements ActionListener {
             // สร้างและแสดงหน้าต่าง MenuFrame นอกเส้นทางของ EDT
             SwingUtilities.invokeLater(() -> {
                 MenuFrame menuframe = new MenuFrame();
-                menuframe.setVisible(true);
-
-                // ปิดหน้าต่างปัจจุบันด้วย setVisible(false)
                 this.setVisible(false);
+                menuframe.setVisible(true);
+                // ปิดหน้าต่างปัจจุบันด้วย setVisible(false)
+//                this.setVisible(false);
             });
         }
     }
+
 
     public JLabel setbackground(){
         ImageIcon back = new ImageIcon("img/background.png");

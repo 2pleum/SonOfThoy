@@ -33,7 +33,7 @@ public class ButtonForMenu implements ActionListener {
         // สร้าง JButton สำหรับเมนูทั้งหมด
         allmenuButton = new JButton();
         ImageIcon all = new ImageIcon("img/all.png");
-        alls = all.getImage().getScaledInstance(200,200, Image.SCALE_SMOOTH);
+        alls = all.getImage().getScaledInstance(180,180, Image.SCALE_SMOOTH);
         allmenuButton.setIcon(new ImageIcon(alls));
         allmenuButton.setOpaque(false);
         allmenuButton.setContentAreaFilled(false);
@@ -45,7 +45,7 @@ public class ButtonForMenu implements ActionListener {
         // สร้าง JButton สำหรับอาหารไทย
         thaiFoodButton = new JButton();
         ImageIcon thai = new ImageIcon("img/thai.png");
-        thais = thai.getImage().getScaledInstance(200,200, Image.SCALE_SMOOTH);
+        thais = thai.getImage().getScaledInstance(180,180, Image.SCALE_SMOOTH);
         thaiFoodButton.setIcon(new ImageIcon(thais));
         thaiFoodButton.setOpaque(false);
         thaiFoodButton.setContentAreaFilled(false);
@@ -56,7 +56,7 @@ public class ButtonForMenu implements ActionListener {
 
         asianFoodButton = new JButton();
         ImageIcon asian = new ImageIcon("img/asian.png");
-        asians = asian.getImage().getScaledInstance(200,200, Image.SCALE_SMOOTH);
+        asians = asian.getImage().getScaledInstance(180,180, Image.SCALE_SMOOTH);
         asianFoodButton.setIcon(new ImageIcon(asians));
         asianFoodButton.setOpaque(false);
         asianFoodButton.setContentAreaFilled(false);
@@ -67,7 +67,7 @@ public class ButtonForMenu implements ActionListener {
 
         westernFoodButton = new JButton();
         ImageIcon west = new ImageIcon("img/western.png");
-        wests = west.getImage().getScaledInstance(200,200, Image.SCALE_SMOOTH);
+        wests = west.getImage().getScaledInstance(180,180, Image.SCALE_SMOOTH);
         westernFoodButton.setIcon(new ImageIcon(wests));
         westernFoodButton.setOpaque(false);
         westernFoodButton.setContentAreaFilled(false);
@@ -78,7 +78,7 @@ public class ButtonForMenu implements ActionListener {
 
         healthyFoodButton = new JButton();
         ImageIcon healthy = new ImageIcon("img/clean.png");
-        healthys = healthy.getImage().getScaledInstance(200,200, Image.SCALE_SMOOTH);
+        healthys = healthy.getImage().getScaledInstance(180,180, Image.SCALE_SMOOTH);
         healthyFoodButton.setIcon(new ImageIcon(healthys));
         healthyFoodButton.setOpaque(false);
         healthyFoodButton.setContentAreaFilled(false);
@@ -89,7 +89,7 @@ public class ButtonForMenu implements ActionListener {
 
         snackButton = new JButton();
         ImageIcon snack = new ImageIcon("img/snack.png");
-        snacks = snack.getImage().getScaledInstance(200,200, Image.SCALE_SMOOTH);
+        snacks = snack.getImage().getScaledInstance(180,180, Image.SCALE_SMOOTH);
         snackButton.setIcon(new ImageIcon(snacks));
         snackButton.setOpaque(false);
         snackButton.setContentAreaFilled(false);
