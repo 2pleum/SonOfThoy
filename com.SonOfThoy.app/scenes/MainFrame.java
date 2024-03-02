@@ -5,8 +5,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.File;
-import java.io.IOException;
+
 
 public class MainFrame extends JFrame implements ActionListener {
     private final ButtonToStart buttonToStart;
@@ -28,29 +27,25 @@ public class MainFrame extends JFrame implements ActionListener {
 
         float w = buttonToStart.getIconWidth();
         float h = buttonToStart.getIconHeight();
-        buttonToStart.setBounds((int)((this.getWidth() - w) / 2), (int)(this.getHeight() / 2) + 100, (int)w, (int) h);
+        buttonToStart.setBounds((int)((this.getWidth() - w) / 2) + 100, (int)(this.getHeight() / 2) + 150, (int)w, (int) h);
         buttonToStart.addActionListener(this);
 
 
         float wl = labelOfStarts.getIconWidth();
         float hl = labelOfStarts.getIconHeight();
-        labelOfStarts.setBounds((int)((this.getWidth() - wl) / 2), (int)(this.getHeight() /2) + 100, (int)wl, (int) hl);
+        labelOfStarts.setBounds((int)((this.getWidth() - wl) / 2) + 100, (int)(this.getHeight() /2) + 150, (int)wl, (int) hl);
 
 
         JLabel back = setbackground();
         JLabel icon = setIconthoy();
-        JLabel text = setText();
-
 
         // เพิ่มปุ่มลงใน MainFrame
         this.add(buttonToStart);
         this.add(labelOfStarts);
         this.add(icon);
-        this.add(text);
         this.add(back);
         back.setVisible(true);
         icon.setVisible(true);
-        text.setVisible(true);
         buttonToStart.setVisible(true);
         labelOfStarts.setVisible(false);
         this.setVisible(true);
@@ -89,21 +84,8 @@ public class MainFrame extends JFrame implements ActionListener {
         Image tt = t.getImage().getScaledInstance(250,250,Image.SCALE_SMOOTH);
         ImageIcon back1 = new ImageIcon(tt);
         JLabel th = new JLabel(back1);
-        th.setBounds((this.getWidth()/ 2) - 350,(this.getHeight()/2)-40,250,250);
+        th.setBounds((this.getWidth()/ 2) -250,(this.getHeight()/2) + 130,250,250);
         return th;
     }
 
-    public JLabel setText(){
-        JLabel text = new JLabel("วันนี้กินอะไรดี ??");
-        try {
-            Font customFont = Font.createFont(Font.TRUETYPE_FONT, new File("img/Myfont/ZF#2ndPixelus.ttf")).deriveFont(80f);
-            text.setFont(customFont);
-            text.setForeground(new Color(0x7C5A5A));
-        } catch (IOException | FontFormatException e) {
-            e.printStackTrace();
-            // จัดการข้อผิดพลาด
-        }
-        text.setBounds((this.getWidth()/ 2) - 100,(this.getHeight()/2),text.getPreferredSize().width,text.getPreferredSize().height);
-        return text;
-    }
 }

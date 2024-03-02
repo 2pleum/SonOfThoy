@@ -161,10 +161,10 @@ public class RandomFrame extends JFrame implements ActionListener {
 
     public JLabel setBackground(){
         ImageIcon back = new ImageIcon("img/paman.png");
-        Image backs = back.getImage().getScaledInstance(this.getHeight(),this.getHeight(),Image.SCALE_SMOOTH);
+        Image backs = back.getImage().getScaledInstance(this.getWidth(),this.getHeight(),Image.SCALE_SMOOTH);
         back = new ImageIcon(backs);
         JLabel backg = new JLabel(back);
-        backg.setBounds((this.getWidth()/2) - (this.getHeight()/2),0,this.getHeight(),this.getHeight());
+        backg.setBounds(0,0,this.getWidth(),this.getHeight());
         return backg;
     }
 }

@@ -15,7 +15,7 @@ public class ButtonToStart extends JButton {
 
     public ButtonToStart() {
         image = new ImageIcon("img/start1.png");
-        images = image.getImage().getScaledInstance(200,200, Image.SCALE_SMOOTH);
+        images = image.getImage().getScaledInstance(250,250, Image.SCALE_SMOOTH);
         this.setIcon(new ImageIcon(images)); // Convert Image to ImageIcon before setting it as icon
         this.setOpaque(false);
         this.setContentAreaFilled(false);

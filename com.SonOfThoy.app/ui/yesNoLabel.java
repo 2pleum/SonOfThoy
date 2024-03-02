@@ -34,7 +34,9 @@ public class yesNoLabel {
     public void setName(String n) {
         name = n;
         nameFood.setText(name);
-        nameFood.setBounds((yesNoF.getWidth() - (nameFood.getPreferredSize().width)+5) / 2, yesNoF.getHeight()/2 - 230, nameFood.getPreferredSize().width+5, nameFood.getPreferredSize().height+20);
+        int x = nameFood.getPreferredSize().width;
+        int y = nameFood.getPreferredSize().height;
+        nameFood.setBounds(((yesNoF.getWidth()-x)/2) + 30,(yesNoF.getHeight()/2) - (y*3) - 10, nameFood.getPreferredSize().width+5, nameFood.getPreferredSize().height+20);
     }
 
 

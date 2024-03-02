@@ -56,17 +56,16 @@ public class yesOrNoFrame extends JFrame implements ActionListener {
         yesL = labelOfYesNo.getYes();
         int xyes = yesNoB.getWeightpcyes();
         int yyes = yesNoB.getHeightpcyes();
-        yesB.setBounds((this.getWidth()/2)- xyes, (this.getHeight()/2), xyes, yyes);
-        yesB.setBounds(this.getWidth()/2 - (xyes + 25),this.getHeight()/2,xyes,yyes);
-        yesL.setBounds(this.getWidth()/2 - (xyes + 25),this.getHeight()/2,xyes,yyes);
+        yesB.setBounds(this.getWidth()/2 - xyes,(this.getHeight()/2) + (yyes/2) + 20,xyes,yyes);
+        yesL.setBounds(this.getWidth()/2 - xyes,(this.getHeight()/2) + (yyes/2) + 20,xyes,yyes);
 
         noB = yesNoB.getNoB();
         noB.addActionListener(this);
         noL = labelOfYesNo.getNo();
         int xno = yesNoB.getWeightno();
         int yno = yesNoB.getHeightpcno();
-        noB.setBounds((this.getWidth()/2) + 25 , this.getHeight()/2, xno, yno);
-        noL.setBounds((this.getWidth()/2) + 25 , this.getHeight()/2, xno, yno);
+        noB.setBounds((this.getWidth()/2) + 45 , (this.getHeight()/2) + (yno/2) + 20, xno, yno);
+        noL.setBounds((this.getWidth()/2) + 45 , (this.getHeight()/2) + (yno/2) + 20, xno, yno);
 
         JLabel namefood = yesNoL.getNameFood();
         this.add(yesB);
@@ -143,14 +142,12 @@ public class yesOrNoFrame extends JFrame implements ActionListener {
         }
 
         JLabel open = setOpenFood(namefood);
-        open.setBounds((this.getWidth()/2) - (this.getHeight()/2),0,this.getHeight(),this.getHeight());
+        open.setBounds(0,0,this.getWidth(),this.getHeight());
         this.add(open);
 
         this.setVisible(true);
         open.setVisible(true);
     }
-
-
 
     public String getName() {return name;}
 
@@ -190,17 +187,16 @@ public class yesOrNoFrame extends JFrame implements ActionListener {
         yesL = labelOfYesNo.getYes();
         int xyes = yesNoB.getWeightpcyes();
         int yyes = yesNoB.getHeightpcyes();
-        yesB.setBounds((this.getWidth()/2)- xyes, (this.getHeight()/2), xyes, yyes);
-        yesB.setBounds(this.getWidth()/2 - (xyes + 25),this.getHeight()/2,xyes,yyes);
-        yesL.setBounds(this.getWidth()/2 - (xyes + 25),this.getHeight()/2,xyes,yyes);
+        yesB.setBounds(this.getWidth()/2 - xyes,(this.getHeight()/2) + (yyes/2) + 20,xyes,yyes);
+        yesL.setBounds(this.getWidth()/2 - xyes,(this.getHeight()/2) + (yyes/2) + 20,xyes,yyes);
 
         noB = yesNoB.getNoB();
         noB.addActionListener(this);
         noL = labelOfYesNo.getNo();
         int xno = yesNoB.getWeightno();
         int yno = yesNoB.getHeightpcno();
-        noB.setBounds((this.getWidth()/2) + 25 , this.getHeight()/2, xno, yno);
-        noL.setBounds((this.getWidth()/2) + 25 , this.getHeight()/2, xno, yno);
+        noB.setBounds((this.getWidth()/2) + 45 , (this.getHeight()/2) + (yno/2) + 20, xno, yno);
+        noL.setBounds((this.getWidth()/2) + 45 , (this.getHeight()/2) + (yno/2) + 20, xno, yno);
 
         JLabel namefood = yesNoL.getNameFood();
         this.add(yesB);
@@ -277,7 +273,7 @@ public class yesOrNoFrame extends JFrame implements ActionListener {
         }
 
         JLabel open = setOpenFood(namefood);
-        open.setBounds((this.getWidth()/2) - (this.getHeight()/2),0,this.getHeight(),this.getHeight());
+        open.setBounds(0,0,this.getWidth(),this.getHeight());
         this.add(open);
 
         this.setVisible(true);
@@ -312,7 +308,7 @@ public class yesOrNoFrame extends JFrame implements ActionListener {
 
     public JLabel setOpenFood(JLabel namefood){
         ImageIcon open = new ImageIcon("img/open2.gif");
-        Image opens = open.getImage().getScaledInstance(this.getHeight(),this.getHeight(), Image.SCALE_DEFAULT);
+        Image opens = open.getImage().getScaledInstance(2550,2025, Image.SCALE_DEFAULT);
         ImageIcon resizedGifIcon = new ImageIcon(opens);
         JLabel openss = new JLabel(resizedGifIcon);
 
