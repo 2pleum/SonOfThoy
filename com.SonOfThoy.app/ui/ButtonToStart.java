@@ -5,43 +5,32 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Objects;
 
 
-public class ButtonToStart extends JButton implements ActionListener {
-    private final MainFrame mainFrame;
+public class ButtonToStart extends JButton {
+//    private final MainFrame mainFrame;
     private final ImageIcon image;
-    public ButtonToStart(MainFrame mainFrame) {
-        this.mainFrame = mainFrame;
-        image = new ImageIcon("img/S__4571152.jpg");
-        this.setIcon(image); // ตั้งรูปภาพให้กับปุ่ม
-        this.setPreferredSize(new Dimension(300, 300)); // ปรับขนาดเป็น 250x250
+    private final Image images;
+
+    public ButtonToStart() {
+        image = new ImageIcon("img/start1.png");
+        images = image.getImage().getScaledInstance(250,250, Image.SCALE_SMOOTH);
+        this.setIcon(new ImageIcon(images)); // Convert Image to ImageIcon before setting it as icon
         this.setOpaque(false);
         this.setContentAreaFilled(false);
         this.setBorderPainted(false);
-        this.setBorder(BorderFactory.createEmptyBorder()); // ลบขอบของปุ่ม
-        this.addActionListener(this); // เพิ่ม ActionListener เพื่อจัดการเหตุการณ์การคลิกปุ่ม
+        this.setBorder(BorderFactory.createEmptyBorder());
+        //this.addActionListener(this);
 
-    }
-
-
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == this) {
-            // ปิดหน้าต่าง scenes.MainFrame
-            mainFrame.setVisible(false);
-
-            // เปิดหน้าต่าง MenuFrame
-            MenuFrame menuframe = new MenuFrame();
-            menuframe.setVisible(true); // เรียกใช้ setVisible(true) เพื่อให้ scenes.Menuframe ปรากฏบนหน้าจอ
-        }
     }
 
     public float getIconHeight(){
-        return image.getIconHeight();
+        return images.getHeight(null);
     }
 
     public float getIconWidth(){
-        return image.getIconWidth();
+        return images.getWidth(null);
     }
 
 }
