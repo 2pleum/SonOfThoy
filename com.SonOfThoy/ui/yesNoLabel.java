@@ -16,7 +16,7 @@ public class yesNoLabel {
         this.yesNoF = yesNoF;
         nameFood = new JLabel();
         try {
-            Font customFont = Font.createFont(Font.TRUETYPE_FONT, new File("img/Myfont/ZF#2ndPixelus.ttf")).deriveFont(80f);
+            Font customFont = Font.createFont(Font.TRUETYPE_FONT, new File("font/ZF#2ndPixelus.ttf")).deriveFont(80f);
             nameFood.setFont(customFont);
             nameFood.setForeground(new Color(0x7C5A5A));
         } catch (IOException | FontFormatException e) {

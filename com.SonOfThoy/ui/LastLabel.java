@@ -15,7 +15,7 @@ public class LastLabel {
         this.name = name;
         nameFood = new JLabel(name);
         try {
-            Font customFont = Font.createFont(Font.TRUETYPE_FONT, new File("img/Myfont/ZF#2ndPixelus.ttf")).deriveFont(75f);
+            Font customFont = Font.createFont(Font.TRUETYPE_FONT, new File("font/ZF#2ndPixelus.ttf")).deriveFont(75f);
             nameFood.setFont(customFont);
             nameFood.setForeground(new Color(0x7C5A5A));
 
@@ -25,7 +25,7 @@ public class LastLabel {
         }
         thoySay = new JLabel("วันนี้พี่ตอย");
         try {
-            Font customFont = Font.createFont(Font.TRUETYPE_FONT, new File("img/Myfont/ZF#2ndPixelus.ttf")).deriveFont(70f);
+            Font customFont = Font.createFont(Font.TRUETYPE_FONT, new File("font/ZF#2ndPixelus.ttf")).deriveFont(70f);
             thoySay.setFont(customFont);
             thoySay.setForeground(new Color(0x7C5A5A));
 
@@ -36,7 +36,7 @@ public class LastLabel {
         //
         thoySay2 = new JLabel("ขอนำเสนอเมนู");
         try {
-            Font customFont = Font.createFont(Font.TRUETYPE_FONT, new File("img/Myfont/ZF#2ndPixelus.ttf")).deriveFont(70f);
+            Font customFont = Font.createFont(Font.TRUETYPE_FONT, new File("font/ZF#2ndPixelus.ttf")).deriveFont(70f);
             thoySay2.setFont(customFont);
             thoySay2.setForeground(new Color(0x7C5A5A));
 
