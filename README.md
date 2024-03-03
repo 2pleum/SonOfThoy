@@ -1,6 +1,10 @@
 # SonOfToy
 
-tmp commit message
+## How to run
+
+```bash
+make run
+```
 
 ## FAQ HOW TO SAVE AND PUSH TO GITHUB?
 
