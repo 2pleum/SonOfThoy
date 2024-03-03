@@ -11,6 +11,8 @@ I am just a mentor of this project. I am here to help the author to build this p
 
 ## How to run
 
+If you want to run this program please follow this instruction:
+
 ```bash
 make run
 ```
