@@ -24,7 +24,7 @@ public class Image {
     ImageIcon background3 = new ImageIcon("1.png"); //หม้อฝาชีเปิด
     ImageIcon yesBPic = new ImageIcon("1.png");
     ImageIcon noBPic = new ImageIcon("1.png");
-    ImageIcon thoyPic = new ImageIcon("/img/lastFPic.jpg");
+    ImageIcon thoyPic = new ImageIcon("img/lastFPic.jpg");
 
     public ImageIcon getThoyPic() {
         return thoyPic;
