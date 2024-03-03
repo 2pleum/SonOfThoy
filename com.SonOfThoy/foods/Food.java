@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class Food {
     public static ArrayList<AllFood> getAllFood() {
-        String file = "com.SonOfThoy.app/foods/all.txt";
+        String file = "com.SonOfThoy/foods/all.txt";
         String line;
 
         ArrayList<AllFood> tmp = new ArrayList<>();
@@ -24,7 +24,7 @@ public class Food {
     }
 
     public static ArrayList<ThaiFood> getThaiFood() {
-        String file = "com.SonOfThoy.app/foods/th.txt";
+        String file = "com.SonOfThoy/foods/th.txt";
         String line;
 
         ArrayList<ThaiFood> tmp = new ArrayList<>();
@@ -41,7 +41,7 @@ public class Food {
     }
 
     public static ArrayList<AsianFood> getAsianFood() {
-        String file = "com.SonOfThoy.app/foods/as.txt";
+        String file = "com.SonOfThoy/foods/as.txt";
         String line;
 
         ArrayList<AsianFood> tmp = new ArrayList<>();
@@ -58,7 +58,7 @@ public class Food {
     }
 
     public static ArrayList<HealthyFood> getHealthyFood() {
-        String file = "com.SonOfThoy.app/foods/health.txt";
+        String file = "com.SonOfThoy/foods/health.txt";
         String line;
 
         ArrayList<HealthyFood> tmp = new ArrayList<>();
@@ -75,7 +75,7 @@ public class Food {
     }
 
     public static ArrayList<WesternFood> getWesternFood() {
-        String file = "com.SonOfThoy.app/foods/ws.txt";
+        String file = "com.SonOfThoy/foods/ws.txt";
         String line;
 
         ArrayList<WesternFood> tmp = new ArrayList<>();
@@ -92,7 +92,7 @@ public class Food {
     }
 
     public static ArrayList<SnackAndSweet> getSnackAndSweet() {
-        String file = "com.SonOfThoy.app/foods/snack.txt";
+        String file = "com.SonOfThoy/foods/snack.txt";
         String line;
 
         ArrayList<SnackAndSweet> tmp = new ArrayList<>();
