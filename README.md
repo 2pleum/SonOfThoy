@@ -1,5 +1,14 @@
 # SonOfToy
 
+---
+## Disclaimer
+
+I am `AppleBoiy`, I am not the author of this project.
+I am just a mentor of this project. I am here to help the author to build this project only.
+
+---
+
+
 ## How to run
 
 ```bash
